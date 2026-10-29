@@ -1,0 +1,8 @@
+{
+  "name": "fygs — Restaurant Sustainability & Accessibility Index",
+  "description": "Multi-agent sustainability and accessibility scoring platform for New York City restaurants, combining Google, Resy, and Beli data into personalized weighted ratings across App Scorecard and Maps Search views.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

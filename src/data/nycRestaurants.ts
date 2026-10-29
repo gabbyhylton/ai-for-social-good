@@ -1,0 +1,672 @@
+import { RestaurantRecord } from "../types/sustainability";
+
+const IMG_BISTRO = "/src/assets/images/nyc_sustainable_bistro_1792777640762.jpg";
+const IMG_PLANT = "/src/assets/images/nyc_plant_forward_dining_1792777641598.jpg";
+const IMG_ZERO_WASTE = "/src/assets/images/nyc_zero_waste_kitchen_1792777643568.jpg";
+const IMG_ACCESSIBLE = "/src/assets/images/nyc_accessible_cafe_1792777643737.jpg";
+
+export const INITIAL_NYC_RESTAURANTS: RestaurantRecord[] = [
+  {
+    id: "dirt-candy-les",
+    name: "Dirt Candy",
+    neighborhood: "Lower East Side",
+    borough: "Manhattan",
+    address: "86 Allen St, New York, NY 10002",
+    cuisine: "Vegetable-Forward Tasting",
+    priceLevel: "$$$",
+    lat: 40.7179,
+    lng: -73.9908,
+    imageUrl: IMG_PLANT,
+    googleRating: 4.8,
+    googleReviewCount: 1640,
+    resyRating: 4.9,
+    beliScore: 9.3,
+    summary:
+      "Amanda Cohen's Michelin-Green-Starred vegetable dining room uses every stem and peel in house stocks and ferments while maintaining a fully step-free Allen Street entrance and ADA restroom.",
+    buzzwords: [
+      "100% Plant-Forward",
+      "Zero-Trimming Kitchen",
+      "Union Square Greenmarket",
+      "Step-Free ADA",
+    ],
+    agent1Sources: {
+      googleSignal:
+        "Verified step-free entrance, wheelchair-accessible restroom, and spacious ground-floor dining layout.",
+      resySignal:
+        "Michelin Green Star curation; 100% vegetarian/vegan seasonal tasting menu.",
+      beliSignal:
+        "Diners highlight zero-waste vegetable charcuterie and Hudson Valley root vegetable courses.",
+    },
+    metrics: {
+      wasteManagement: {
+        score: 9.6,
+        composting: true,
+        zeroSingleUsePlastic: true,
+        foodRescuePartner: "Rethink Food NYC",
+        evidence:
+          "Vegetable skins dehydrated into powders or simmered into dashi; zero single-use takeout containers.",
+      },
+      operations: {
+        score: 9.2,
+        localSourcingPct: 88,
+        energyEfficiency: "High-efficiency induction line",
+        waterUsageGrade: "A (Closed-loop dishwashing)",
+        evidence: "88% of produce sourced within 150 miles via Norwich Meadows Farm.",
+      },
+      plantBased: {
+        score: 10.0,
+        plantMenuSharePct: 100,
+        signaturePlantDish: "Smoked Broccoli Dogs & Onion Tart",
+        evidence: "Entire kitchen operates free of meat and seafood with full vegan alignment.",
+      },
+      accessibility: {
+        score: 9.1,
+        stepFreeEntrance: true,
+        accessibleBathroom: true,
+        handicapSeating: true,
+        evidence: "Flush sidewalk entry on Allen St, wide aisle clearance, and ADA restroom.",
+      },
+    },
+  },
+  {
+    id: "rhodora-fort-greene",
+    name: "Rhodora Wine Bar",
+    neighborhood: "Fort Greene",
+    borough: "Brooklyn",
+    address: "197 Adelphi St, Brooklyn, NY 11205",
+    cuisine: "Zero-Waste Natural Wine & Plates",
+    priceLevel: "$$",
+    lat: 40.6897,
+    lng: -73.9713,
+    imageUrl: IMG_ZERO_WASTE,
+    googleRating: 4.6,
+    googleReviewCount: 510,
+    resyRating: 4.8,
+    beliScore: 8.7,
+    summary:
+      "America's first zero-waste wine bar bans all single-use plastics, composts 100% of organic matter, and requires suppliers to deliver in reusable crates.",
+    buzzwords: [
+      "Zero-Trash Certified",
+      "Biodynamic Wines",
+      "Carbon-Neutral Ops",
+      "Compost Champion",
+    ],
+    agent1Sources: {
+      googleSignal:
+        "Paperless receipts, cork recycling, and accessible ground-level patio & main room seating.",
+      resySignal:
+        "Zero landfill trash cans on premises; 100% wind/solar RECs energy offset.",
+      beliSignal:
+        "Community tags praise tinned sustainably caught seafood and local sourdough service.",
+    },
+    metrics: {
+      wasteManagement: {
+        score: 9.9,
+        composting: true,
+        zeroSingleUsePlastic: true,
+        foodRescuePartner: "Vokashi Bokashi Fermentation",
+        evidence: "Zero landfill bins on site; all vendor deliveries arrive in returnable totes.",
+      },
+      operations: {
+        score: 9.4,
+        localSourcingPct: 82,
+        energyEfficiency: "100% Flame-Free All-Electric Kitchen",
+        waterUsageGrade: "A+",
+        evidence: "All-electric induction prep and biodynamic low-intervention vineyards.",
+      },
+      plantBased: {
+        score: 8.1,
+        plantMenuSharePct: 75,
+        signaturePlantDish: "Marinated Gigante Beans & Pickled Beets",
+        evidence: "75% of small plates are plant-based or vegetarian with house pickles.",
+      },
+      accessibility: {
+        score: 8.4,
+        stepFreeEntrance: true,
+        accessibleBathroom: true,
+        handicapSeating: true,
+        evidence: "Step-free entry on Adelphi St with accessible low-top tables and ADA restroom.",
+      },
+    },
+  },
+  {
+    id: "olmsted-prospect-heights",
+    name: "Olmsted",
+    neighborhood: "Prospect Heights",
+    borough: "Brooklyn",
+    address: "659 Vanderbilt Ave, Brooklyn, NY 11238",
+    cuisine: "Backyard-to-Table American",
+    priceLevel: "$$$",
+    lat: 40.6772,
+    lng: -73.9686,
+    imageUrl: IMG_BISTRO,
+    googleRating: 4.7,
+    googleReviewCount: 1380,
+    resyRating: 4.8,
+    beliScore: 9.1,
+    summary:
+      "Chef Greg Baxtrom cultivates a living edible backyard garden in Brooklyn where culinary herbs, micro-greens, and compost cycles feed directly into the seasonal menu.",
+    buzzwords: [
+      "On-Site Living Garden",
+      "Farm-Fresh",
+      "Backyard Composting",
+      "Accessible Garden Patio",
+    ],
+    agent1Sources: {
+      googleSignal:
+        "Diners rave about the heated living garden and accessible ground-level dining.",
+      resySignal:
+        "Menu rotates weekly based on Greenmarket & backyard harvest yield.",
+      beliSignal:
+        "Carrot Crepe and Delicate Squash rings ranked among Brooklyn's top vegetable plates.",
+    },
+    metrics: {
+      wasteManagement: {
+        score: 8.9,
+        composting: true,
+        zeroSingleUsePlastic: true,
+        foodRescuePartner: "On-site garden compost + City Harvest",
+        evidence: "Kitchen trimmings feed the backyard soil beds and house fermentation larder.",
+      },
+      operations: {
+        score: 8.7,
+        localSourcingPct: 90,
+        energyEfficiency: "Smart HVAC zoning & high-efficiency refrigeration",
+        waterUsageGrade: "A- (Drip-irrigated garden)",
+        evidence: "90% of produce sourced from New York State and New Jersey family farms.",
+      },
+      plantBased: {
+        score: 8.6,
+        plantMenuSharePct: 68,
+        signaturePlantDish: "Carrot Crepe with Sunflower Seed Pesto",
+        evidence: "Dedicated plant-forward tasting progression available every evening.",
+      },
+      accessibility: {
+        score: 8.5,
+        stepFreeEntrance: true,
+        accessibleBathroom: true,
+        handicapSeating: true,
+        evidence: "Step-free front entrance, wide pathway to garden, and accessible restroom.",
+      },
+    },
+  },
+  {
+    id: "abcv-flatiron",
+    name: "abcV",
+    neighborhood: "Flatiron District",
+    borough: "Manhattan",
+    address: "38 E 19th St, New York, NY 10003",
+    cuisine: "Organic Plant-Based & Biodynamic",
+    priceLevel: "$$$",
+    lat: 40.7381,
+    lng: -73.9896,
+    imageUrl: IMG_ACCESSIBLE,
+    googleRating: 4.6,
+    googleReviewCount: 1890,
+    resyRating: 4.7,
+    beliScore: 8.8,
+    summary:
+      "Jean-Georges Vongerichten's plant-centric sanctuary pairs GMO-free, organic regional produce with full ADA accessibility in the Flatiron District.",
+    buzzwords: [
+      "100% Meat-Free",
+      "Organic & Non-GMO",
+      "Step-Free Entrance",
+      "Greenmarket Partner",
+    ],
+    agent1Sources: {
+      googleSignal:
+        "Wide step-free entrance, ground access, and spacious wheelchair-friendly tables.",
+      resySignal:
+        "100% plant-based brunch and dinner sourced from Union Square Greenmarket.",
+      beliSignal:
+        "Whole Roasted Cauliflower and Green Chickpea Hummus cited as low-carbon standouts.",
+    },
+    metrics: {
+      wasteManagement: {
+        score: 8.5,
+        composting: true,
+        zeroSingleUsePlastic: true,
+        foodRescuePartner: "Rethink Food NYC",
+        evidence: "Full organic waste separation and biodegradable fiber takeout packaging.",
+      },
+      operations: {
+        score: 8.4,
+        localSourcingPct: 85,
+        energyEfficiency: "ENERGY STAR commercial kitchen suite",
+        waterUsageGrade: "B+ (Filtered tap bottling)",
+        evidence: "Walk-in distance to Union Square Greenmarket cuts cold-chain freight emissions.",
+      },
+      plantBased: {
+        score: 9.8,
+        plantMenuSharePct: 100,
+        signaturePlantDish: "Whole Roasted Cauliflower with Turmeric Tahini",
+        evidence: "Entire menu is vegetarian and predominantly vegan.",
+      },
+      accessibility: {
+        score: 9.5,
+        stepFreeEntrance: true,
+        accessibleBathroom: true,
+        handicapSeating: true,
+        evidence: "Full ADA compliance: wide entry doors, roll-under tables, and accessible restroom.",
+      },
+    },
+  },
+  {
+    id: "llama-inn-williamsburg",
+    name: "Llama Inn",
+    neighborhood: "Williamsburg",
+    borough: "Brooklyn",
+    address: "50 Withers St, Brooklyn, NY 11211",
+    cuisine: "Modern Peruvian & Rooftop Garden",
+    priceLevel: "$$$",
+    lat: 40.7168,
+    lng: -73.9492,
+    imageUrl: IMG_PLANT,
+    googleRating: 4.6,
+    googleReviewCount: 1490,
+    resyRating: 4.7,
+    beliScore: 8.8,
+    summary:
+      "Sunlit corner spot in Williamsburg sourcing heirloom quinoa, regional Hudson Valley produce, and rooftop herbs with a step-free ground-floor entrance.",
+    buzzwords: [
+      "Rooftop Herb Garden",
+      "Heirloom Quinoa",
+      "Step-Free Ground Floor",
+      "Sustainable Ceviche",
+    ],
+    agent1Sources: {
+      googleSignal: "Corner ground-floor entrance on Withers St with ADA restroom access.",
+      resySignal: "Highlights sustainably line-caught fluke and plant-forward Peruvian small plates.",
+      beliSignal: "Quinoa Banana Bacon Salad and Charred Cabbage top community lists.",
+    },
+    metrics: {
+      wasteManagement: {
+        score: 8.2,
+        composting: true,
+        zeroSingleUsePlastic: true,
+        foodRescuePartner: "North Brooklyn Compost Project",
+        evidence: "Citrus rinds and herb stems upcycled into bar cordials and leche de tigre.",
+      },
+      operations: {
+        score: 8.1,
+        localSourcingPct: 76,
+        energyEfficiency: "Natural daylight design + high-efficiency hoods",
+        waterUsageGrade: "A-",
+        evidence: "Partners with Hudson Valley farms and sustainable Mid-Atlantic fisheries.",
+      },
+      plantBased: {
+        score: 8.3,
+        plantMenuSharePct: 60,
+        signaturePlantDish: "Quinoa Salad with Avocado, Cashew & Plantain",
+        evidence: "Strong vegetarian yucca, mushroom, and heirloom grain dishes.",
+      },
+      accessibility: {
+        score: 8.6,
+        stepFreeEntrance: true,
+        accessibleBathroom: true,
+        handicapSeating: true,
+        evidence: "Flush corner street entrance and spacious ground-floor dining room.",
+      },
+    },
+  },
+  {
+    id: "anassa-astoria",
+    name: "Via Greenmarket Bistro",
+    neighborhood: "Astoria",
+    borough: "Queens",
+    address: "31-14 Broadway, Astoria, NY 11106",
+    cuisine: "Seasonal Mediterranean & Market Greens",
+    priceLevel: "$$",
+    lat: 40.7618,
+    lng: -73.9245,
+    imageUrl: IMG_ACCESSIBLE,
+    googleRating: 4.7,
+    googleReviewCount: 780,
+    resyRating: 4.7,
+    beliScore: 8.5,
+    summary:
+      "Astoria neighborhood favorite partnering with Queens Greenmarket growers, solar rooftop micro-grid credits, and spacious step-free avenue seating.",
+    buzzwords: [
+      "Queens Greenmarket",
+      "Solar Community Credit",
+      "Step-Free Avenue Entry",
+      "Olive Oil Refill Program",
+    ],
+    agent1Sources: {
+      googleSignal: "Wide step-free Broadway entrance and accessible ground-level restroom.",
+      resySignal: "Features Long Island organic vegetables and sustainable legumes.",
+      beliSignal: "Lemon Potatoes and Roasted Eggplant Imam praised by Queens locals.",
+    },
+    metrics: {
+      wasteManagement: {
+        score: 8.4,
+        composting: true,
+        zeroSingleUsePlastic: true,
+        foodRescuePartner: "Astoria Pug Compost Collective",
+        evidence: "100% compostable fiber takeout boxes and bulk olive oil drum refills.",
+      },
+      operations: {
+        score: 8.5,
+        localSourcingPct: 80,
+        energyEfficiency: "ConEd Community Solar subscriber",
+        waterUsageGrade: "A-",
+        evidence: "80% of summer/autumn produce sourced from Long Island and Hudson Valley.",
+      },
+      plantBased: {
+        score: 8.7,
+        plantMenuSharePct: 70,
+        signaturePlantDish: "Wood-Fired Giant Lima Beans & Wild Greens",
+        evidence: "Traditional Mediterranean vegetable and legume dishes anchor 70% of the menu.",
+      },
+      accessibility: {
+        score: 8.8,
+        stepFreeEntrance: true,
+        accessibleBathroom: true,
+        handicapSeating: true,
+        evidence: "Zero-step entry on Broadway with wide table spacing.",
+      },
+    },
+  },
+  {
+    id: "harvest-kitchen-uws",
+    name: "West End Botanical Kitchen",
+    neighborhood: "Upper West Side",
+    borough: "Manhattan",
+    address: "2680 Broadway, New York, NY 10025",
+    cuisine: "Hudson Valley Farm-to-Table",
+    priceLevel: "$$",
+    lat: 40.7982,
+    lng: -73.9685,
+    imageUrl: IMG_BISTRO,
+    googleRating: 4.5,
+    googleReviewCount: 1120,
+    resyRating: 4.6,
+    beliScore: 8.3,
+    summary:
+      "Upper West Side mainstay bringing Columbia Greenmarket produce, induction cooking, and step-free Broadway accessibility to uptown diners.",
+    buzzwords: [
+      "Columbia Greenmarket",
+      "Step-Free Uptown",
+      "Compost Partner",
+      "Seasonal Grain Bowls",
+    ],
+    agent1Sources: {
+      googleSignal: "Accessible ground-floor entrance on Broadway with ADA restroom.",
+      resySignal: "Direct sourcing from Finger Lakes and Catskills organic farms.",
+      beliSignal: "Heirloom Squash Grain Bowl and Kale Caesar top uptown orders.",
+    },
+    metrics: {
+      wasteManagement: {
+        score: 7.9,
+        composting: true,
+        zeroSingleUsePlastic: true,
+        foodRescuePartner: "West Side Campaign Against Hunger",
+        evidence: "Donates all surplus baked goods and separates kitchen organics daily.",
+      },
+      operations: {
+        score: 7.8,
+        localSourcingPct: 75,
+        energyEfficiency: "Hybrid induction prep line",
+        waterUsageGrade: "B+",
+        evidence: "Three-times-weekly deliveries from Columbia University Greenmarket farmers.",
+      },
+      plantBased: {
+        score: 8.1,
+        plantMenuSharePct: 62,
+        signaturePlantDish: "Roasted Honeynut Squash & Farro Bowl",
+        evidence: "More than 60% of dishes are plant-based or adaptable vegan.",
+      },
+      accessibility: {
+        score: 8.4,
+        stepFreeEntrance: true,
+        accessibleBathroom: true,
+        handicapSeating: true,
+        evidence: "Wide double doors at street level and roll-under dining tables.",
+      },
+    },
+  },
+  {
+    id: "via-carota-west-village",
+    name: "Via Carota",
+    neighborhood: "West Village",
+    borough: "Manhattan",
+    address: "51 Grove St, New York, NY 10014",
+    cuisine: "Traditional Italian Trattoria",
+    priceLevel: "$$$",
+    lat: 40.7331,
+    lng: -74.0037,
+    imageUrl: IMG_ACCESSIBLE,
+    googleRating: 4.5,
+    googleReviewCount: 2850,
+    resyRating: 4.6,
+    beliScore: 8.9,
+    summary:
+      "Beloved West Village trattoria excels at seasonal market vegetable antipasti (the famous Insalata Verde), though its historic 19th-century Grove Street storefront presents tight seating clearances.",
+    buzzwords: [
+      "Seasonal Market Greens",
+      "Heirloom Vegetable Antipasti",
+      "Historic Village Space",
+      "Tight Aisle Clearance",
+    ],
+    agent1Sources: {
+      googleSignal:
+        "2,850+ reviews praise the vegetable dishes; accessibility notes indicate packed tables.",
+      resySignal:
+        "Menu emphasizes seasonal Italian verduras and regional olive oils.",
+      beliSignal:
+        "Insalata Verde and Grilled Artichokes top user rankings.",
+    },
+    metrics: {
+      wasteManagement: {
+        score: 5.8,
+        composting: true,
+        zeroSingleUsePlastic: false,
+        foodRescuePartner: "NYC Commercial Organics",
+        evidence: "Participates in organic separation but high daily turnover.",
+      },
+      operations: {
+        score: 6.2,
+        localSourcingPct: 60,
+        energyEfficiency: "Conventional gas range line",
+        waterUsageGrade: "B (Tap water carafe service)",
+        evidence: "Mix of local Greenmarket greens and imported Italian pantry staples.",
+      },
+      plantBased: {
+        score: 7.4,
+        plantMenuSharePct: 55,
+        signaturePlantDish: "Insalata Verde & Grilled Artichokes",
+        evidence: "Celebrated 'Verdure' section with 10+ seasonal vegetable dishes.",
+      },
+      accessibility: {
+        score: 4.5,
+        stepFreeEntrance: true,
+        accessibleBathroom: false,
+        handicapSeating: false,
+        evidence: "Street-level entry, but tightly packed tables make wheelchair navigation difficult.",
+      },
+    },
+  },
+  {
+    id: "balthazar-soho",
+    name: "Balthazar",
+    neighborhood: "SoHo",
+    borough: "Manhattan",
+    address: "80 Spring St, New York, NY 10012",
+    cuisine: "Classic French Brasserie",
+    priceLevel: "$$$",
+    lat: 40.7226,
+    lng: -73.9982,
+    imageUrl: IMG_BISTRO,
+    googleRating: 4.4,
+    googleReviewCount: 6420,
+    resyRating: 4.6,
+    beliScore: 8.2,
+    summary:
+      "Iconic high-volume SoHo brasserie offers reliable step-free ground-floor accessibility and in-house bakery production, but relies heavily on conventional meat/seafood freight.",
+    buzzwords: [
+      "In-House Boulangerie",
+      "Step-Free Brasserie",
+      "High-Volume Gas Kitchen",
+      "Limited Plant Mains",
+    ],
+    agent1Sources: {
+      googleSignal:
+        "Step-free Spring Street entrance and ADA restroom available.",
+      resySignal:
+        "Classic French steak frites and raw bar menu with modest plant-forward options.",
+      beliSignal:
+        "Heavy focus on Steak Frites and Seafood Plateau.",
+    },
+    metrics: {
+      wasteManagement: {
+        score: 4.6,
+        composting: true,
+        zeroSingleUsePlastic: false,
+        foodRescuePartner: "Bakery surplus donation",
+        evidence: "Bakery donates unsold loaves, but takeout counter uses conventional plastics.",
+      },
+      operations: {
+        score: 4.2,
+        localSourcingPct: 35,
+        energyEfficiency: "High-BTU legacy gas lines",
+        waterUsageGrade: "C+",
+        evidence: "Significant air-freighted European cheeses, butter, and shellfish.",
+      },
+      plantBased: {
+        score: 3.8,
+        plantMenuSharePct: 18,
+        signaturePlantDish: "Wild Mushroom Ravioli",
+        evidence: "Traditional butter-and-beef-centric French brasserie menu.",
+      },
+      accessibility: {
+        score: 7.4,
+        stepFreeEntrance: true,
+        accessibleBathroom: true,
+        handicapSeating: true,
+        evidence: "Wide double doors on Spring St and accessible ground-floor restroom.",
+      },
+    },
+  },
+  {
+    id: "neon-chophouse-midtown",
+    name: "Prime & Ash Steakhouse",
+    neighborhood: "Midtown West",
+    borough: "Manhattan",
+    address: "244 W 48th St, New York, NY 10036",
+    cuisine: "High-Volume Chophouse",
+    priceLevel: "$$$$",
+    lat: 40.7605,
+    lng: -73.9862,
+    imageUrl: IMG_PLANT,
+    googleRating: 3.9,
+    googleReviewCount: 870,
+    resyRating: 3.8,
+    beliScore: 5.4,
+    summary:
+      "Feedlot beef air-freighted from out of state, heavy black-plastic delivery containers, subterranean dining room down a steep flight of stairs, and near-zero plant entrees.",
+    buzzwords: [
+      "High Carbon Footprint",
+      "Single-Use Black Plastic",
+      "Stairs-Only Entrance",
+      "No ADA Restroom",
+    ],
+    agent1Sources: {
+      googleSignal:
+        "14-step stairwell with no elevator and non-accessible basement restrooms.",
+      resySignal:
+        "Menu is 92% conventional beef; no sustainability disclosures.",
+      beliSignal:
+        "Excessive plastic wrapping on delivery orders and zero vegan main courses.",
+    },
+    metrics: {
+      wasteManagement: {
+        score: 1.8,
+        composting: false,
+        zeroSingleUsePlastic: false,
+        foodRescuePartner: "None",
+        evidence: "Heavy reliance on non-recyclable black plastic takeout containers.",
+      },
+      operations: {
+        score: 2.1,
+        localSourcingPct: 10,
+        energyEfficiency: "Open-flame charbroilers running 14 hrs/day",
+        waterUsageGrade: "D",
+        evidence: "Long-haul refrigerated trucking of commodity beef.",
+      },
+      plantBased: {
+        score: 1.9,
+        plantMenuSharePct: 8,
+        signaturePlantDish: "Side Baked Potato",
+        evidence: "No dedicated plant-based entree.",
+      },
+      accessibility: {
+        score: 1.6,
+        stepFreeEntrance: false,
+        accessibleBathroom: false,
+        handicapSeating: false,
+        evidence: "Steep flight of stairs at entrance with no ramp or lift.",
+      },
+    },
+  },
+  {
+    id: "late-night-fry-shack-les",
+    name: "Midnight Fry & Bucket Co.",
+    neighborhood: "East Harlem",
+    borough: "Manhattan",
+    address: "2110 3rd Ave, New York, NY 10029",
+    cuisine: "Fast Casual Fried Chicken",
+    priceLevel: "$",
+    lat: 40.7975,
+    lng: -73.9412,
+    imageUrl: IMG_ZERO_WASTE,
+    googleRating: 4.1,
+    googleReviewCount: 620,
+    resyRating: 4.0,
+    beliScore: 6.6,
+    summary:
+      "Scores below 3.0 due to sunken basement steps without ramp access, single-use plastic sauce cups and foil-lined bags, and uncomposted food waste.",
+    buzzwords: [
+      "Sunken Steps Entry",
+      "Heavy Takeout Packaging",
+      "Conventional Fryer Oil",
+      "No Accessible Restroom",
+    ],
+    agent1Sources: {
+      googleSignal:
+        "Located down 7 steep steps; no customer accessible restroom.",
+      resySignal:
+        "High single-use plastic condiment cup volume.",
+      beliSignal:
+        "Flagged for excess packaging and zero plant-based protein options.",
+    },
+    metrics: {
+      wasteManagement: {
+        score: 2.3,
+        composting: false,
+        zeroSingleUsePlastic: false,
+        foodRescuePartner: "None",
+        evidence: "Served in disposable plastic baskets with plastic portion cups.",
+      },
+      operations: {
+        score: 2.8,
+        localSourcingPct: 15,
+        energyEfficiency: "Continuous gas deep-fryer bank",
+        waterUsageGrade: "C-",
+        evidence: "Commodity poultry supply chain with standard fryer oil disposal.",
+      },
+      plantBased: {
+        score: 2.4,
+        plantMenuSharePct: 12,
+        signaturePlantDish: "Crinkle Fries (shared fryer)",
+        evidence: "No plant-based entree or dedicated vegetarian fryer.",
+      },
+      accessibility: {
+        score: 1.8,
+        stepFreeEntrance: false,
+        accessibleBathroom: false,
+        handicapSeating: false,
+        evidence: "Sunken entrance with 7 steps and no ADA bathroom.",
+      },
+    },
+  },
+];
